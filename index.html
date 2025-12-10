@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Madhuri 👼</title>
+
+  <!-- Load a beautiful calligraphy font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- Simple, editable styling ---------- */
+    :root{
+      --bg:#fff7f9; /* pale pink */
+      --accent:#c94b8c; /* flower pink */
+      --leaf:#6aa84f;
+      --text:#333;
+      --card:#fff;
+      --shadow: rgba(0,0,0,0.08);
+      --font-sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      --font-calligraphy: 'Great Vibes', 'Parisienne', 'Dancing Script', cursive;
+    }
+    *{box-sizing:border-box}
+    body{font-family:var(--font-sans);margin:0;background:var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+
+    .stage{width:980px;max-width:100%;background:linear-gradient(180deg,var(--card),#fff);border-radius:18px;box-shadow:0 10px 30px var(--shadow);overflow:hidden;position:relative;padding:28px}
+
+    /* frame background */
+    .frame{
+      border-radius:12px;padding:18px;background:
+        radial-gradient(circle at 10% 10%, rgba(201,75,140,0.15) 0 8px, transparent 9px),
+        radial-gradient(circle at 90% 20%, rgba(106,168,79,0.12) 0 6px, transparent 7px),
+        radial-gradient(circle at 30% 80%, rgba(201,75,140,0.12) 0 8px, transparent 9px),
+        linear-gradient(180deg,#fff9fb,#fff);
+      position:relative;overflow:hidden;
+      min-height:460px;display:flex;gap:18px;align-items:center}
+
+    /* left column: lots of styled M's */
+    .monogram-area{flex:0 0 260px;display:flex;align-items:center;justify-content:center;position:relative}
+    .monogram-wrap{width:220px;height:380px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.95));box-shadow:0 6px 18px rgba(0,0,0,0.04);position:relative;overflow:hidden;padding:12px}
+
+    .miniM{
+      position:absolute;display:inline-block;user-select:none;pointer-events:none;line-height:0.85;
+      opacity:0.95;mix-blend-mode:multiply;
+      font-family:var(--font-calligraphy);
+      background: linear-gradient(90deg,#ffb7e6,#ffc8f0,#ffe0f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+      animation: floaty 6s infinite ease-in-out;
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-6px) scale(1.05); }
+      100% { transform: translateY(0) scale(1); }
+    }
+
+    /* right side: photos + message */
+    .content{flex:1;display:flex;flex-direction:column;gap:12px}
+    .photos{display:flex;gap:12px}
+    .photo{flex:1;background:#fff;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;border:2px solid rgba(0,0,0,0.03)}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .message-card{background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.95));padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .message{
+      font-size:26px;
+      font-family:var(--font-calligraphy);
+      min-height:70px;
+      white-space:pre-wrap;
+      line-height:1.6;
+      letter-spacing:0.5px;
+      background: linear-gradient(90deg,#b38728,#f7ef8a,#f7d86a,#b38728);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: goldshine 4s infinite linear;
+    }
+
+    @keyframes goldshine {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    /* controls */
+    .controls{display:flex;gap:8px;align-items:center;margin-top:6px}
+    button{padding:8px 14px;border-radius:9px;border:0;background:var(--accent);color:white;font-weight:600;cursor:pointer}
+    .btn-muted{background:transparent;color:var(--accent);border:2px solid rgba(201,75,140,0.12)}
+
+    /* animated confetti flowers */
+    .confetti{position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none}
+    .flower{position:absolute;width:28px;height:28px;opacity:0;transform-origin:center}
+
+    /* helper text */
+    .hint{font-size:13px;color:#666;font-family:var(--font-sans)}
+
+    /* responsive tweak */
+    @media(max-width:820px){.frame{flex-direction:column}.monogram-area{order:2}.photos{width:100%}}
+  .angel-title{
+      font-family: var(--font-calligraphy);
+      font-size: 48px;
+      text-align: center;
+      margin: 0 0 20px 0;
+      color: #6a1b9a; /* deep royal purple */
+      text-shadow: 0 0 4px rgba(255,255,255,0.7), 0 0 10px rgba(140,90,200,0.8);
+      letter-spacing: 1px;
+      animation: angelGlow 3.5s infinite ease-in-out;
+    }
+
+    @keyframes angelGlow{
+      0%{ text-shadow: 0 0 12px rgba(255,200,255,0.9), 0 0 22px rgba(255,180,255,0.7);} 
+      50%{ text-shadow: 0 0 22px rgba(255,230,255,1), 0 0 34px rgba(255,200,255,0.9);} 
+      100%{ text-shadow: 0 0 12px rgba(255,200,255,0.9), 0 0 22px rgba(255,180,255,0.7);} 
+    }
+
+.top-aura{
+      position:absolute;
+      left:50%;
+      top:18px; /* sits behind the heading */
+      transform:translateX(-50%);
+      width:84%;
+      height:140px;
+      border-radius:40px;
+      background: radial-gradient(closest-side, rgba(255,230,255,0.65), rgba(255,200,255,0.28) 40%, rgba(255,180,255,0.08) 70%, transparent 80%);
+      filter: blur(28px);
+      opacity:0.95;
+      pointer-events:none;
+      z-index:1;
+      animation: auraPulse 4.2s ease-in-out infinite;
+    }
+
+    .angel-title{position:relative;z-index:2}
+
+    @keyframes auraPulse{
+      0%{ transform: translateX(-50%) scale(0.98); opacity:0.9; filter: blur(24px);} 
+      50%{ transform: translateX(-50%) scale(1.04); opacity:1; filter: blur(18px);} 
+      100%{ transform: translateX(-50%) scale(0.98); opacity:0.9; filter: blur(24px);} 
+    }
+
+</style>
+</head>
+<body>
+
+  <div class="stage">
+    <h1 class="angel-title">✨ Happy Birthday Madhuri 🤗 ✨</h1>
+      <div class="top-aura" aria-hidden="true"></div>
+    <div class="frame" id="frame">
+      <div class="monogram-area">
+        <div class="monogram-wrap" id="monogramWrap" aria-hidden="true"></div>
+      </div>
+
+      <div class="content">
+        <div class="photos">
+          <label class="photo" id="slot1" title="Photo 1">
+            <img id="img1" src="images/photo1.jpg" alt="Photo 1">
+          </label>
+          <label class="photo" id="slot2" title="Photo 2">
+            <img id="img2" src="images/photo2.jpg" alt="Photo 2">
+          </label>
+        </div>
+
+        <div class="message-card">
+          <div contenteditable="true" id="message" class="message">Hey Madhu, I never knew back then that you would become such a special person to me. I'm truly grateful for the friendship we've shared over the years - the endless chats, the random jokes, and the moments that always lift my mood. You've been the reason behind so many unexpected smiles, and I'll appreciate that. Here's wishing you an amazing year ahead and hope our bond stays still no matter what. Wishing you a very, very Happy Birthday, dear MADHURI...aka (Potti!) ❤️ 💐</div>
+          <div class="hint">Click the text above to edit the message. You can paste emojis too.</div>
+        </div>
+
+        <div class="controls">
+          <input id="file1" type="file" accept="image/*" style="display:none" />
+          <input id="file2" type="file" accept="image/*" style="display:none" />
+          <button id="upload1" class="btn-muted">Upload Photo 1</button>
+          <button id="upload2" class="btn-muted">Upload Photo 2</button>
+          <button id="play">Play Animation</button>
+          <button id="download" class="btn-muted">Download HTML</button>
+        </div>
+      </div>
+
+      <div class="confetti" id="confetti"></div>
+    </div>
+  </div>
+
+  <script>
+    const file1 = document.getElementById('file1');
+    const file2 = document.getElementById('file2');
+    const img1 = document.getElementById('img1');
+    const img2 = document.getElementById('img2');
+    const upload1 = document.getElementById('upload1');
+    const upload2 = document.get
