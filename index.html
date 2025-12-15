@@ -33,41 +33,10 @@
         radial-gradient(circle at 30% 80%, rgba(201,75,140,0.12) 0 8px, transparent 9px),
         linear-gradient(180deg,#fff9fb,#fff);
       position:relative;overflow:hidden;
-      min-height:460px;display:flex;gap:18px;align-items:center}
+      min-height:460px;display:block;}
 
-    /* left column: lots of styled M's */
-    .monogram-area{flex:0 0 260px;display:flex;align-items:center;justify-content:center;position:relative}
-    .monogram-wrap{
-      width:220px;
-      height:380px;
-      border-radius:12px;
-      background:
-        url('https://i.imgur.com/1t4qQ2h.png'), /* soft floral texture */
-        linear-gradient(180deg, #ffe6f7 0%, #fff0fa 100%);
-      background-size: 260px, cover;
-      background-repeat: repeat, no-repeat;
-      box-shadow:0 6px 18px rgba(0,0,0,0.04);
-      position:relative;
-      overflow:hidden;
-      padding:12px;
-}
-
-    .miniM{
-      position:absolute;display:inline-block;user-select:none;pointer-events:none;line-height:0.85;
-      opacity:0.95;mix-blend-mode:multiply;
-      font-family:var(--font-calligraphy);
-      background: linear-gradient(90deg,#ffb7e6,#ffc8f0,#ffe0f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
-      animation: floaty 6s infinite ease-in-out;
-    }
-
-    @keyframes floaty {
-      0% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-6px) scale(1.05); }
-      100% { transform: translateY(0) scale(1); }
-    }
+    
+  
 
     /* right side: photos + message */
     .content{flex:1;display:flex;flex-direction:column;gap:12px}
@@ -157,9 +126,7 @@
     <h1 class="angel-title">✨ Happy Birthday Madhuri 🤗 ✨</h1>
       <div class="top-aura" aria-hidden="true"></div>
     <div class="frame" id="frame">
-      <div class="monogram-area">
-        <div class="monogram-wrap" id="monogramWrap" aria-hidden="true"></div>
-      </div>
+     
 
       <div class="content">
         <div class="photos">
@@ -197,6 +164,7 @@
     const img2 = document.getElementById('img2');
     const upload1 = document.getElementById('upload1');
     const upload2 = document.get
+
 
 
 
