@@ -37,7 +37,20 @@
 
     /* left column: lots of styled M's */
     .monogram-area{flex:0 0 260px;display:flex;align-items:center;justify-content:center;position:relative}
-    .monogram-wrap{width:220px;height:380px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.95));box-shadow:0 6px 18px rgba(0,0,0,0.04);position:relative;overflow:hidden;padding:12px}
+    .monogram-wrap{
+      width:220px;
+      height:380px;
+      border-radius:12px;
+      background:
+        url('https://i.imgur.com/1t4qQ2h.png'), /* soft floral texture */
+        linear-gradient(180deg, #ffe6f7 0%, #fff0fa 100%);
+      background-size: 260px, cover;
+      background-repeat: repeat, no-repeat;
+      box-shadow:0 6px 18px rgba(0,0,0,0.04);
+      position:relative;
+      overflow:hidden;
+      padding:12px;
+}
 
     .miniM{
       position:absolute;display:inline-block;user-select:none;pointer-events:none;line-height:0.85;
@@ -184,5 +197,6 @@
     const img2 = document.getElementById('img2');
     const upload1 = document.getElementById('upload1');
     const upload2 = document.get
+
 
 
