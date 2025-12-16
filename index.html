@@ -21,9 +21,11 @@
       --font-calligraphy: 'Great Vibes', 'Parisienne', 'Dancing Script', cursive;
     }
     *{box-sizing:border-box}
-    body{font-family:var(--font-sans);margin:0;background:var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+    body{font-family:var(--font-sans);margin:0;background: url('images/background.jpg') no-repeat center center fixed;
+background-size: cover;color:var(--text);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
 
-    .stage{width:980px;max-width:100%;background:linear-gradient(180deg,var(--card),#fff);border-radius:18px;box-shadow:0 10px 30px var(--shadow);overflow:hidden;position:relative;padding:28px}
+    .stage{width:980px;max-width:100%;background: rgba(0,0,0,0.45);
+backdrop-filter: blur(6px);border-radius:18px;box-shadow:0 10px 30px var(--shadow);overflow:hidden;position:relative;padding:28px}
 
     /* frame background */
     .frame{
@@ -164,6 +166,7 @@
     const img2 = document.getElementById('img2');
     const upload1 = document.getElementById('upload1');
     const upload2 = document.get
+
 
 
 
