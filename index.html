@@ -169,6 +169,32 @@ backdrop-filter: blur(4px);
 .glow {
   animation: cardGlow 2.5s ease-in-out;
 }
+/* ---------- HEART SHAPED GLOW ---------- */
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: -25px;
+  background:
+    radial-gradient(circle at 30% 35%, rgba(255,105,180,0.45), transparent 60%),
+    radial-gradient(circle at 70% 35%, rgba(255,105,180,0.45), transparent 60%),
+    radial-gradient(circle at 50% 70%, rgba(255,105,180,0.35), transparent 60%);
+  opacity: 0;
+  filter: blur(18px);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.frame.heart-glow::before {
+  opacity: 1;
+  animation: heartPulse 2.8s ease-in-out;
+}
+
+@keyframes heartPulse {
+  0%   { transform: scale(0.95); opacity: 0.4; }
+  50%  { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(0.95); opacity: 0.4; }
+}
 
 
 
@@ -231,19 +257,20 @@ backdrop-filter: blur(4px);
 
   /* ---------- Play Animation ---------- */
   playBtn.addEventListener('click', playAnimation);
-function playAnimation() {
-  // Card glow (restartable)
-  frame.classList.remove('glow');
-  void frame.offsetWidth; // reset animation
-  frame.classList.add('glow');
+   function playAnimation() {
+  // Restart heart glow
+  frame.classList.remove('heart-glow');
+  void frame.offsetWidth;
+  frame.classList.add('heart-glow');
 
-  // Pulse + confetti
+  // Existing pulse
   frame.style.animation = 'none';
   frame.offsetHeight;
   frame.style.animation = 'pulse 1.2s ease';
 
   launchConfetti();
 }
+
 
 
 
@@ -262,6 +289,7 @@ function playAnimation() {
     }
   }
 </script>
+
 
 
 
