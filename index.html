@@ -131,6 +131,26 @@ backdrop-filter: blur(4px);
       50%{ transform: translateX(-50%) scale(1.04); opacity:1; filter: blur(18px);} 
       100%{ transform: translateX(-50%) scale(0.98); opacity:0.9; filter: blur(24px);} 
     }
+    
+    @keyframes fall {
+  0% {
+    top: -10%;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
 
 </style>
 </head>
@@ -169,13 +189,53 @@ backdrop-filter: blur(4px);
     </div>
   </div>
 
-  <script>
-    const file1 = document.getElementById('file1');
-    const file2 = document.getElementById('file2');
-    const img1 = document.getElementById('img1');
-    const img2 = document.getElementById('img2');
-    const upload1 = document.getElementById('upload1');
-    const upload2 = document.get
+ <script>
+  // Elements
+  const file1 = document.getElementById('file1');
+  const img1 = document.getElementById('img1');
+  const upload1 = document.getElementById('upload1');
+  const playBtn = document.getElementById('play');
+  const confetti = document.getElementById('confetti');
+  const frame = document.getElementById('frame');
+
+  /* ---------- Upload Photo ---------- */
+  upload1.addEventListener('click', () => file1.click());
+
+  file1.addEventListener('change', () => {
+    const file = file1.files[0];
+    if (!file) return;
+    img1.src = URL.createObjectURL(file);
+  });
+
+  /* ---------- Play Animation ---------- */
+  playBtn.addEventListener('click', playAnimation);
+
+  function playAnimation() {
+    // Restart glow animation
+    frame.style.animation = 'none';
+    frame.offsetHeight;
+    frame.style.animation = 'pulse 1.2s ease';
+
+    launchConfetti();
+  }
+
+  /* ---------- Confetti Flowers ---------- */
+  function launchConfetti() {
+    confetti.innerHTML = '';
+
+    for (let i = 0; i < 20; i++) {
+      const flower = document.createElement('div');
+      flower.className = 'flower';
+      flower.innerHTML = '🌸';
+      flower.style.left = Math.random() * 100 + '%';
+      flower.style.animation = `fall ${3 + Math.random() * 2}s linear`;
+      flower.style.fontSize = 18 + Math.random() * 18 + 'px';
+      confetti.appendChild(flower);
+    }
+  }
+</script>
+
+
 
 
 
